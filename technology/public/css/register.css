@@ -76,6 +76,9 @@ i.i-re-pass {
 	background: url(/img/re-pass.png) no-repeat center;
 	background-size: cover;
 }
+.line input {
+	padding-left: 0.1rem;
+}
 .line input[type="text"],
 .line input[type="password"],
 .line select,
