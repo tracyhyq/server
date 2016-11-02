@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>案例详情</title>
+	<meta content="yes" name="apple-touch-fullscreen">
+	<!-- 删除苹果默认的工具栏和菜单栏 (允许网页以app方式经行运行) -->
+	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<!-- 保留历史记录以及动画效果 -->
+	<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+	<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	<meta name="format-detection" content="telephone=no,email=no" >
+	<!-- 以 web app 的形式打开页面-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/case-detail.css">
+	<link rel="stylesheet" type="text/css" href="/js/layer/layer.css">
+
+	<script src="/js/seajs/sea.js" id="seajsnode"></script>
+	<script src="/js/sea-config.js"></script>
+	<script src="/js/lib/fastclick.js"></script>
+	<script src="/js/layer/layer.js"></script>
+	<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+</head>
+<body>
+	<div class="ui-top-bar">
+		<i class="logo"></i>
+		<span class="top-title">案例详情</span>
+	</div>
+	<div class="content">
+		<div class="case-detail-wrap">
+			
+		</div>
+	</div>
+
+	<script> seajs.use("/js/case-detail"); </script>
+</body>
+</html>

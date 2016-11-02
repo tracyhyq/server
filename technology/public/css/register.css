@@ -1,0 +1,110 @@
+.content {
+	height: 100%;
+	padding: 0.53rem 0.24rem;
+}
+.content .register-form {
+	border: 1px solid #c9c9c9;
+	border-radius: 0.1rem;
+	font-size: 16px;
+	background-color: #fff;
+	color: #969696;
+}
+.line {
+	height: 1.73rem;
+	line-height: 1.2rem;
+	border-bottom: 1px solid #c9c9c9;
+	box-sizing: border-box;
+	padding: 0.27rem 0.53rem;
+	position: relative;
+}
+.line-radio {
+	height: 2.56rem;
+}
+.line-radio input{
+	margin-left: 0.35rem;
+}
+.line-radio input:first-child {
+	margin-left: 0;
+}
+.line:last-child {
+	border: 0;
+}
+.line i {
+	position: absolute;
+	top: 0.55rem;
+	left: 0.46rem;
+}
+i.i-org {
+	width: 0.426rem;
+	height: 0.68rem;
+	background: url(/img/or-type.png) no-repeat center;
+	background-size: cover;
+}
+i.i-org-name {
+	width: 0.4rem;
+	height: 0.573rem;
+	background: url(/img/or-name.png) no-repeat center;
+	background-size: cover;
+}
+i.i-in {
+	width: 0.4rem;
+	height: 0.466rem;
+	background: url(/img/industry.png) no-repeat center;
+	background-size: cover;
+}
+i.i-con {
+	width: 0.453rem;
+	height: 0.52rem;
+	background: url(/img/contact.png) no-repeat center;
+	background-size: cover;
+}
+i.i-mobi {
+	width: 0.386rem;
+	height: 0.626rem;
+	background: url(/img/mobile.png) no-repeat center;
+	background-size: cover;
+}
+i.i-pass {
+	width: 0.52rem;
+	height: 0.64rem;
+	background: url(/img/pass.png) no-repeat center;
+	background-size: cover;
+}
+i.i-re-pass {
+	width: 0.506rem;
+	height: 0.613rem;
+	background: url(/img/re-pass.png) no-repeat center;
+	background-size: cover;
+}
+.line input[type="text"],
+.line input[type="password"],
+.line select,
+.placeholder {
+	width: 5.2rem;
+	height: 0.93rem;
+	margin-left: 0.8rem;
+	display: inline-block;
+	color: #969696;
+}
+.line-text {
+	height: 2.85rem;
+}
+.line-text textarea {
+	width: 100%;
+	height: 100%;
+}
+
+.send-code {
+	display: inline-block;
+	width: 1.76rem;
+	height: 0.86rem;
+	line-height: 0.86rem;
+	text-align: center;
+	color: #fff;
+	border-radius: 0.1rem;
+	background-color: #16427d;
+	font-size: 14px;
+}
+.disable {
+	background-color: #b8b8b8;
+}

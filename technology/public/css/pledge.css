@@ -1,0 +1,26 @@
+.content {
+	height: 100%;
+}
+.intro {
+	background-color: #fff;
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 2.9rem;
+	font-size: 14px;
+	color: #333;
+	padding: 0.466rem 0.266rem;
+	border-bottom: 1px solid #c8c8c8;
+}
+.cases-wrap {
+	border-bottom: 1px solid #e6e6e6;
+}
+.logoes {
+	border-top: 1px solid #d8d8d8;
+}
+.logo-title {
+	font-size: 18px;
+    margin: 0.373rem 0.266rem;
+}
+.pledge-frame {
+	margin-top: 0.5rem;
+}

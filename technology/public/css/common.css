@@ -1,0 +1,135 @@
+body {
+	background-color: #f7f7f7;
+}
+.ui-top-bar {
+	width: 100%;
+	height: 1.2rem;
+	background-color: #16427d;
+	position: relative;
+	line-height: 1.2rem;
+	text-align: center;
+}
+.ui-top-bar .logo {
+	position: absolute;
+	width: 2.44rem;
+	height: 0.6rem;
+	background: url(/img/logo.png) no-repeat center;
+	background-size: cover;
+	left: 0.267rem;
+	top: 0.293rem;
+}
+.ui-top-bar .top-title {
+	color: #fff;
+	font-size: 20px;
+}
+.hidden {
+	display: none;
+}
+.tip {
+	font-size: 14px;
+	color: #969696;
+	display: block;
+	text-align: center;
+	margin-bottom: 0.76rem;
+}
+.btn-sub {
+	display: block;
+	text-align: center;
+	width: 8.93rem;
+	height: 1.25rem;
+	line-height: 1.25rem;
+	margin: 0.586rem auto;
+	background-color: #16427d;
+	color: #fff;
+	border-radius: 0.1rem;
+	font-size: 20px;
+}
+.clear {
+	clear: both;
+}
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+	text-decoration: none;
+}
+
+.cases-wrap {
+	position: relative;
+}
+.cases-wrap p {
+	font-size: 18px;
+	margin: 0.373rem 0.266rem;
+}
+.swiper-wrap {
+	border-top: 1px solid #e6e6e6;
+	background-color: #fff;
+}
+.swiper-wrap li {
+	float: left;
+	width: 25%;
+	height: 1.2rem;
+	font-size: 14px;
+	line-height: 1.2rem;
+	text-align: center;
+	border-bottom: 1px solid #e6e6e6;
+	box-sizing: border-box;
+}
+li.active {
+	color: #16427d;
+	border-bottom-color: #16427d;
+	border-bottom-width: 2px;
+}
+.swiper-container {
+	margin-top: 0.56rem;
+	height: 4.36rem;
+	overflow: hidden;
+}
+.swiper-slide {
+	height: 4.36rem;
+	float: left;
+}
+.logoes {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.346rem 0.266rem;
+	border-bottom: 1px solid #d8d8d8;
+	background-color: #fff;
+}
+.logoes li {
+	float: left;
+	width: 1.28rem;
+	height: 1.09rem;
+	line-height: 1.09rem;
+	overflow: hidden;
+	text-align: center;;
+	vertical-align: middle;
+	margin-left: 0.753rem;
+	margin-bottom: 0.373rem;
+}
+.logoes li:first-child {
+	margin-left: 0;
+}
+.logoes li img {
+	vertical-align: middle;
+}
+.case-item {
+	position: relative;
+}
+.case-item img {
+	display: block;
+	width: 3.41rem;
+	height: 2.53rem;
+}
+.case-item .case-title {
+	width: 3.41rem;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 0.333rem;
+	color: #000;
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}

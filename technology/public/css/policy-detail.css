@@ -1,0 +1,25 @@
+body {
+	background-color: #fff;
+}
+.content {
+	height: 100%;
+}
+.policy-detail-wrap {
+	padding: 0.5rem 0.233rem;
+}
+.policy-detail-wrap .policy-title {
+	text-align: center;
+	font-size: 18px;
+}
+.policy-detail-wrap .policy-time {
+	text-align: center;
+	font-size: 12px;
+	color: #a0a0a0;
+	margin-top: 0.3rem;
+}
+.policy-detail-wrap .policy-content {
+	font-size: 12px;
+	margin-top: 0.5rem;
+	text-indent: 0.4rem;
+	line-height: 1.4;
+}

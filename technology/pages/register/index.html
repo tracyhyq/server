@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户注册</title>
+	<meta content="yes" name="apple-touch-fullscreen">
+	<!-- 删除苹果默认的工具栏和菜单栏 (允许网页以app方式经行运行) -->
+	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<!-- 保留历史记录以及动画效果 -->
+	<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+	<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	<meta name="format-detection" content="telephone=no,email=no" >
+	<!-- 以 web app 的形式打开页面-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/register.css">
+	<link rel="stylesheet" type="text/css" href="/js/layer/layer.css">
+
+	<script src="/js/seajs/sea.js" id="seajsnode"></script>
+	<script src="/js/sea-config.js"></script>
+	<script src="/js/lib/fastclick.js"></script>
+	<script src="/js/layer/layer.js"></script>
+	<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+</head>
+<body>
+	<div class="ui-top-bar">
+		<i class="logo"></i>
+		<span class="top-title">注册</span>
+	</div>
+	<div class="content">
+		<form class="register-form" id="register-form">
+			<div class="line">
+				<i class="i-org"></i>
+				<select class="require" msg="请选择机构类型" name="organization" id="organization" placeholder="机构类型">
+					<option value="">请选择机构类型</option>
+				</select>
+				<i class="select-icon"></i>
+			</div>
+			<div class="line">
+				<i class="i-org-name"></i>
+				<input class="require" msg="请输入机构名" type="text" name="organizationName" placeholder="机构名"> 
+			</div>
+			<div class="line">
+				<i class="i-in"></i>
+				<select class="require" msg="请选择行业" name="industry" id="industry">
+					<option value="">请选择行业</option>
+				</select>
+				<i class="select-icon"></i>
+			</div>
+			<div class="line">
+				<i class="i-con"></i>
+				<input class="require" msg="请填写联系人" type="text" name="contact" placeholder="联系人"> 
+			</div>
+			<div class="line">
+				<i class="i-con"></i>
+				<input class="require" msg="请填写用户名" type="text" name="userName" placeholder="3~25位用户名"> 
+			</div>
+			<div class="line">
+				<i class="i-mobi"></i>
+				<input class="require" msg="请填写手机号" type="text" name="mobile" placeholder="11位手机号码"> 
+				<span id="send-code" class="send-code">验证码</span>
+			</div>
+			<div class="line">
+				<i class="i-pass"></i>
+				<input class="require" msg="请输入验证码" type="text" name="code" placeholder="验证码"> 
+			</div>
+			<div class="line">
+				<i class="i-pass"></i>
+				<input class="require" msg="请输入密码" type="password" name="password" placeholder="6~20位密码"> 
+			</div>
+			<div class="line">
+				<i class="i-re-pass"></i>
+				<input class="require" msg="请再次输入密码" type="password" name="re-password" placeholder="确认密码"> 
+			</div>
+			<div class="line line-radio">
+				<input type="radio" name="requirementType" value="1"> 有技术转移需求
+				<input type="radio" name="requirementType" value="2">有融资需求
+				<input type="radio" name="requirementType" value="3"> 有技术合作需求
+			</div>
+		</form>
+		<span id="submit" class="btn-sub">注册</span>
+		<span class="tip">注册即视为同意科技服务大市场<a href="javascript:;" id="arm">《隐私条款》</a></span>
+	</div>
+
+	<script> seajs.use("/js/register"); </script>
+</body>
+</html>

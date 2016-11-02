@@ -1,0 +1,60 @@
+.content {
+	height: 100%;
+}
+.flex-cases {
+	border-top: 1px solid #e6e6e6;
+}
+.flex-cases p {
+	font-size: 18px;
+	margin: 0.373rem 0.266rem;
+}
+.flex-cases p a {
+	float: right;
+	font-size: 14px;
+	color: #999;
+	margin-top: 3px;
+}
+.cases-list {
+	border-top: 1px solid #e6e6e6;
+	background-color: #fff;
+	box-sizing: border-box;
+	padding: 0.44rem 0.32rem;
+	padding-bottom: 0;
+	border-bottom: 1px solid #cfcfcf;
+}
+.flex-case-item {
+	width: 100%;
+	padding: 0.386rem 0;
+	padding-bottom: 0.2rem;
+	position: relative;
+	border-bottom: 1px solid #d3d3d3;
+}
+.flex-case-item:last-child {
+	border-bottom: 0;
+}
+.flex-case-item img {
+	border: 1px solid #a0a0a0;
+	position: absolute;
+	width: 1.84rem;
+	height: 1.37rem;
+	top: 0.45rem;
+	left: 0;
+}
+.flex-case-item .case-title {
+	margin-left: 2.17rem;
+	font-size: 14px;
+	color: #2e1514;
+	max-width: 6.98rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	display: block;
+}
+.flex-case-item .case-desc {
+	margin-left: 2.17rem;
+	font-size: 13px;
+	color: #a0a0a0;
+}
+.finance-frame {
+	margin-top: 0.5rem;
+}
