@@ -22,6 +22,8 @@
 }
 .line-radio input{
 	margin-left: 0.35rem;
+	vertical-align: -1px;
+	margin-right: 3px;
 }
 .line-radio input:first-child {
 	margin-left: 0;
@@ -77,17 +79,20 @@ i.i-re-pass {
 	background-size: cover;
 }
 .line input {
-	padding-left: 0.1rem;
+	padding-left: 0.2rem;
 }
 .line input[type="text"],
 .line input[type="password"],
 .line select,
 .placeholder {
-	width: 5.2rem;
+	width: 90%;
 	height: 0.93rem;
 	margin-left: 0.8rem;
 	display: inline-block;
 	color: #969696;
+}
+.line input[name="mobile"] {
+	width: 5.2rem;
 }
 .line-text {
 	height: 2.85rem;
