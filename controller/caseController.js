@@ -15,38 +15,21 @@ var config = require('../config/serverConfig');
  * @return {[type]}     [description]
  */
 function getCasesByType(request, response) {
-	var result = {
-		"success": true,
-		"data": [
-			{
-				"caseId": 1,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "案例名称"
-			},
-			{
-				"caseId": 2,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "案例名称1"
-			},
-			{
-				"caseId": 3,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "案例名称2"
-			},
-			{
-				"caseId": 4,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "案例名称3"
-			},
-			{
-				"caseId": 5,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "案例名称4"
-			}
-		]
-	};
+	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getCasesByType', method: 'GET'});
 
-	response.status(200).json(result);
+    var req = http.request(option, function(res) { 
+        res.on('data', function(data) {  
+        	var ret = eval('(' + data + ')');
+            response.status(200).json(ret); 
+        });  
+    });  
+
+    req.end();  
+
+    req.on('error', function(e) {  
+        console.error(e); 
+        response.status(500); 
+    });
 }
 
 /**
@@ -56,31 +39,21 @@ function getCasesByType(request, response) {
  * @return {[type]}          [description]
  */
 function getSpecialCases(request, response) {
-	var result = {
-		"success": true,
-		"data": [
-			{
-				"caseId": 1,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "中国四联仪器表集团有限公司中国四联仪器表集团有限公司",
-				"caseDesc": "中国四联仪器表集团有限公司于1987年以四川仪表厂为核心..."
-			},
-			{
-				"caseId": 1,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "中国四联仪器表集团有限公司中国四联仪器表集团有限公司",
-				"caseDesc": "中国四联仪器表集团有限公司于1987年以四川仪表厂为核心..."
-			},
-			{
-				"caseId": 1,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "中国四联仪器表集团有限公司中国四联仪器表集团有限公司",
-				"caseDesc": "中国四联仪器表集团有限公司于1987年以四川仪表厂为核心..."
-			}
-		]
-	};
+	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getSpecialCases', method: 'GET'});
 
-	response.status(200).json(result);
+    var req = http.request(option, function(res) { 
+        res.on('data', function(data) {  
+        	var ret = eval('(' + data + ')');
+            response.status(200).json(ret); 
+        });  
+    });  
+
+    req.end();  
+
+    req.on('error', function(e) {  
+        console.error(e); 
+        response.status(500); 
+    });
 }
 
 /**
@@ -90,31 +63,21 @@ function getSpecialCases(request, response) {
  * @return {[type]}          [description]
  */
 function getCases(request, response) {
-	var result = {
-		"success": true,
-		"data": [
-			{
-				"caseId": 1,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "中国四联仪器表集团有限公司中国四联仪器表集团有限公司",
-				"caseDesc": "中国四联仪器表集团有限公司于1987年以四川仪表厂为核心..."
-			},
-			{
-				"caseId": 1,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "中国四联仪器表集团有限公司中国四联仪器表集团有限公司",
-				"caseDesc": "中国四联仪器表集团有限公司于1987年以四川仪表厂为核心..."
-			},
-			{
-				"caseId": 1,
-				"picSrc": "http://www.baidu.com/img/bd_logo1.png",
-				"caseTitle": "中国四联仪器表集团有限公司中国四联仪器表集团有限公司",
-				"caseDesc": "中国四联仪器表集团有限公司于1987年以四川仪表厂为核心..."
-			}
-		]
-	};
+	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getCases', method: 'GET'});
 
-	response.status(200).json(result);
+    var req = http.request(option, function(res) { 
+        res.on('data', function(data) {  
+        	var ret = eval('(' + data + ')');
+            response.status(200).json(ret); 
+        });  
+    });  
+
+    req.end();  
+
+    req.on('error', function(e) {  
+        console.error(e); 
+        response.status(500); 
+    });
 }
 
 /**
@@ -124,16 +87,22 @@ function getCases(request, response) {
  * @return {[type]}          [description]
  */
 function getCaseDetailById(request, response) {
-	var result = {
-		"success": true,
-		"data": {
-			"title": "案例title",
-			"time": "2016-01-29 12:23:43",
-			"content": "<p>这里是案例详情内容</p><p>这里是案例详情内容</p><p>这里是案例详情内容</p><p>这里是案例详情内容</p><p>这里是案例详情内容</p>"
-		}
-	};
+	var caseId = request.body.caseId,
+		option = config.getConnnectOption({path: '/index.php?app=wx&act=getCaseDetailById&caseId=' + caseId, method: 'GET'});
 
-	response.status(200).json(result);
+    var req = http.request(option, function(res) { 
+        res.on('data', function(data) {  
+        	var ret = eval('(' + data + ')');
+            response.status(200).json(ret); 
+        });  
+    });  
+
+    req.end();  
+
+    req.on('error', function(e) {  
+        console.error(e); 
+        response.status(500); 
+    });
 }
 
 module.exports = {

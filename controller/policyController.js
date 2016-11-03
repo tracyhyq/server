@@ -15,25 +15,21 @@ var config = require('../config/serverConfig');
  * @return {[type]}          [description]
  */
 function getRecommandPolicyList(request, response) {
-	var result = {
-		"success": true,
-		"data": [
-			{
-				"policyId": 1,
-				"policyName": "中华人民共和国劳动争议仲裁法",
-				"publishTime": "2016-01-29 15:43:46",
-				"region": "重庆"
-			},
-			{
-				"policyId": 2,
-				"policyName": "失业保险条例",
-				"publishTime": "2016-01-29 15:43:46",
-				"region": "北京"
-			}
-		]
-	};
+	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getRecommandPolicyList', method: 'GET'});
 
-	response.status(200).json(result);
+    var req = http.request(option, function(res) { 
+        res.on('data', function(data) {  
+        	var ret = eval('(' + data + ')');
+            response.status(200).json(ret); 
+        });  
+    });  
+
+    req.end();  
+
+    req.on('error', function(e) {  
+        console.error(e); 
+        response.status(500); 
+    });
 }
 
 /**
@@ -43,25 +39,22 @@ function getRecommandPolicyList(request, response) {
  * @return {[type]}          [description]
  */
 function getPolicies(request, response) {
-	var result = {
-		"success": true,
-		"data": [
-			{
-				"policyId": 1,
-				"policyName": "中华人民共和国劳动争议仲裁法",
-				"publishTime": "2016-01-29 15:43:46",
-				"region": "重庆"
-			},
-			{
-				"policyId": 2,
-				"policyName": "失业保险条例",
-				"publishTime": "2016-01-29 15:43:46",
-				"region": "北京"
-			}
-		]
-	};
+	var keyword = request.body.keyword,
+		option = config.getConnnectOption({path: '/index.php?app=wx&act=getPolicies&keyword=' + keyword, method: 'GET'});
 
-	response.status(200).json(result);
+    var req = http.request(option, function(res) { 
+        res.on('data', function(data) {  
+        	var ret = eval('(' + data + ')');
+            response.status(200).json(ret); 
+        });  
+    });  
+
+    req.end();  
+
+    req.on('error', function(e) {  
+        console.error(e); 
+        response.status(500); 
+    });
 }
 
 /**
@@ -71,16 +64,22 @@ function getPolicies(request, response) {
  * @return {[type]}          [description]
  */
 function getPolicyById(request, response) {
-	var result = {
-		"success": true,
-		"data": {
-			"policyName": "政策title",
-			"publishTime": "2016-01-29 12:23:43",
-			"content": "<p>这里是政策详情内容</p>"
-		}
-	};
+	var policyId = request.body.policyId,
+		option = config.getConnnectOption({path: '/index.php?app=wx&act=getPolicyById&policyId=' + policyId, method: 'GET'});
 
-	response.status(200).json(result);
+    var req = http.request(option, function(res) { 
+        res.on('data', function(data) {  
+        	var ret = eval('(' + data + ')');
+            response.status(200).json(ret); 
+        });  
+    });  
+
+    req.end();  
+
+    req.on('error', function(e) {  
+        console.error(e); 
+        response.status(500); 
+    });
 }
 
 module.exports = {
