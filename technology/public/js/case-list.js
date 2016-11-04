@@ -19,7 +19,7 @@ define(function(require, exports, module) {
 
 			$.ajax({
 				url: '/getCases',
-				type: 'GET',
+				type: 'POST',
 				data: {},
 				dataType: 'json'
 			}).done(function(res){

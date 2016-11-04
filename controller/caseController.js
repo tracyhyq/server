@@ -15,11 +15,17 @@ var config = require('../config/serverConfig');
  * @return {[type]}     [description]
  */
 function getCasesByType(request, response) {
-	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getCasesByType', method: 'GET'});
+	var caseType = request.query.caseType,
+		option = config.getConnnectOption({path: '/index.php?app=wx&act=getCasesByType&caseType=' + caseType, method: 'GET'});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
+        	retData += data;
+        });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
             response.status(200).json(ret); 
         });  
     });  
@@ -42,10 +48,15 @@ function getSpecialCases(request, response) {
 	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getSpecialCases', method: 'GET'});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
-            response.status(200).json(ret); 
+        	retData += data;
         });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
+            response.status(200).json(ret); 
+        }); 
     });  
 
     req.end();  
@@ -63,13 +74,17 @@ function getSpecialCases(request, response) {
  * @return {[type]}          [description]
  */
 function getCases(request, response) {
-	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getCases', method: 'GET'});
+	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getCases&_=' + new Date().getTime(), method: 'POST'});
 
+	var postData = '';
     var req = http.request(option, function(res) { 
-        res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
-            response.status(200).json(ret); 
-        });  
+        res.on('data', function(data) { 
+        	postData += data;
+        }); 
+        res.on('end', function(){
+        	var ret = JSON.parse(postData);
+        	response.status(200).json(ret); 
+        }) 
     });  
 
     req.end();  
@@ -87,12 +102,17 @@ function getCases(request, response) {
  * @return {[type]}          [description]
  */
 function getCaseDetailById(request, response) {
-	var caseId = request.body.caseId,
+	var caseId = request.query.caseId,
 		option = config.getConnnectOption({path: '/index.php?app=wx&act=getCaseDetailById&caseId=' + caseId, method: 'GET'});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
+        	retData += data;
+        });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
             response.status(200).json(ret); 
         });  
     });  

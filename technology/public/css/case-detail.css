@@ -18,8 +18,11 @@ body {
 	margin-top: 0.3rem;
 }
 .case-detail-wrap .case-content {
-	font-size: 12px;
 	margin-top: 0.5rem;
 	text-indent: 0.4rem;
 	line-height: 1.4;
+}
+.case-detail-wrap .case-content img {
+	display: block;
+	margin: 10px 0;
 }

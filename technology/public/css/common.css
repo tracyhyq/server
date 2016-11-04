@@ -87,12 +87,9 @@ li.active {
 }
 .swiper-container {
 	margin-top: 0.56rem;
-	height: 4.36rem;
 	overflow: hidden;
-}
-.swiper-slide {
-	height: 4.36rem;
-	float: left;
+	padding-bottom: 0.233rem;
+	width: 96%;
 }
 .logoes {
 	width: 100%;
@@ -127,8 +124,7 @@ li.active {
 	height: 2.53rem;
 }
 .case-item .case-title {
-	width: 3.41rem;
-	font-size: 14px;
+	font-size: 12px;
 	text-align: center;
 	margin-top: 0.333rem;
 	color: #000;

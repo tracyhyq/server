@@ -75,7 +75,8 @@ define(function(require, exports, module) {
 	function _initSwiper () {
 		var mySwiper = new Swiper('.swiper-container',{
 		    autoplay : 5000,//可选选项，自动滑动
-		    slidesPerView : 3
+		    slidesPerView : 3,
+		    spaceBetween : 10
 		});
 	}
 

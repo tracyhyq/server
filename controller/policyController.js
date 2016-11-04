@@ -18,8 +18,13 @@ function getRecommandPolicyList(request, response) {
 	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getRecommandPolicyList', method: 'GET'});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
+        	retData += data;
+        });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
             response.status(200).json(ret); 
         });  
     });  
@@ -39,14 +44,19 @@ function getRecommandPolicyList(request, response) {
  * @return {[type]}          [description]
  */
 function getPolicies(request, response) {
-	var keyword = request.body.keyword,
+	var keyword = request.query.keyword,
 		option = config.getConnnectOption({path: '/index.php?app=wx&act=getPolicies&keyword=' + keyword, method: 'GET'});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
-            response.status(200).json(ret); 
+        	retData += data;
         });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
+            response.status(200).json(ret); 
+        }); 
     });  
 
     req.end();  
@@ -64,14 +74,19 @@ function getPolicies(request, response) {
  * @return {[type]}          [description]
  */
 function getPolicyById(request, response) {
-	var policyId = request.body.policyId,
+	var policyId = request.query.policyId,
 		option = config.getConnnectOption({path: '/index.php?app=wx&act=getPolicyById&policyId=' + policyId, method: 'GET'});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
-            response.status(200).json(ret); 
+        	retData += data;
         });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
+            response.status(200).json(ret); 
+        }); 
     });  
 
     req.end();  

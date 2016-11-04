@@ -70,7 +70,7 @@ router.get('/caseList', function(req, res) {
  * @param  {[type]} res [description]
  * @return {[type]}     [description]
  */
-router.get('/getCases', function(req, res) {
+router.post('/getCases', function(req, res) {
 	caseService.getCases(req, res);
 });
 

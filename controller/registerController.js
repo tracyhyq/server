@@ -18,10 +18,15 @@ function getOrganization(request, response) {
 	var option = config.getConnnectOption({path: '/index.php?app=wx&act=getOrganization', method: 'GET'});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
-            response.status(200).json(ret); 
+        	retData += data;
         });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
+            response.status(200).json(ret); 
+        });
     });  
 
     req.end();  
@@ -53,8 +58,13 @@ function sendCode(request, response) {
 		});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
+        	retData += data;
+        });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
             response.status(200).json(ret); 
         });  
     });  
@@ -96,10 +106,15 @@ function doRegister(request, response) {
 		});
 
     var req = http.request(option, function(res) { 
+    	var retData = '';
+
         res.on('data', function(data) {  
-        	var ret = eval('(' + data + ')');
-            response.status(200).json(ret); 
+        	retData += data;
         });  
+        res.on('end', function() {
+        	var ret = JSON.parse(retData);
+            response.status(200).json(ret); 
+        }); 
     });  
 
     req.write(queryData);
