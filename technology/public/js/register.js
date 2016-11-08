@@ -177,10 +177,19 @@ define(function(require, exports, module) {
 				}
 			}
 
-			if(!$(":radio:checked").length) {
+			if(!$(":checkbox:checked").length) {
 				util.alert('请选择需求类型!');
 				return false;
 			}
+
+			var checked = $("input[type='checkbox']:checked"),
+				arr = [];
+
+			for(var i = 0, len = checked.length; i < len; i++) {
+				arr.push(checked[i].value);
+			}
+
+			$('input[name="requirementType"]').val(arr.join(','));
 
 			return true;
 		},

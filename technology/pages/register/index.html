@@ -74,10 +74,12 @@
 				<input class="require" msg="请再次输入密码" type="password" name="re-password" placeholder="确认密码"> 
 			</div>
 			<div class="line line-radio">
-				<input type="radio" name="requirementType" value="1"> 有技术转移需求
-				<input type="radio" name="requirementType" value="2">有融资需求
-				<input type="radio" name="requirementType" value="3"> 有技术合作需求
+				<input type="checkbox" value="1"> 有技术转移需求
+				<input type="checkbox" value="2">有融资需求
+				<input type="checkbox" value="3"> 有技术合作需求
 			</div>
+			<input type="hidden" name="requirementType" value="
+			">
 		</form>
 		<span id="submit" class="btn-sub">注册</span>
 		<span class="tip">注册即视为同意科技服务大市场<a href="javascript:;" id="arm">《隐私条款》</a></span>
